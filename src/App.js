@@ -1,25 +1,66 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { Virtual } from "swiper/modules";
+import { Pagination } from 'swiper/modules';
+import "swiper/css/virtual";
+import image from './assets/images/Image.png'
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="container">
+      <Swiper
+        modules={[Virtual, Pagination]}
+        pagination={true}
+        autoplay={{ delay: 500, disableOnInteraction: false }}
+        spaceBetween={30}
+        slidesPerView={4}
+        virtual
+      >
+        <SwiperSlide>
+          <div className="card">
+            <img className="w-100" src={image} alt="image" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="card">
+            <img className="w-100" src={image} alt="image" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="card">
+            <img className="w-100" src={image} alt="image" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="card">
+            <img className="w-100" src={image} alt="image" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="card">
+            <img className="w-100" src={image} alt="image" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="card">
+            <img className="w-100" src={image} alt="image" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="card">
+            <img className="w-100" src={image} alt="image" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="card">
+            <img className="w-100" src={image} alt="image" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="card">
+            <img className="w-100" src={image} alt="image" />
+          </div>
+        </SwiperSlide>
+      </Swiper>
+    </div >
   );
 }
-
-export default App;
