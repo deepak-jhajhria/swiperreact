@@ -4,6 +4,7 @@ import { Virtual } from "swiper/modules";
 import { Pagination } from 'swiper/modules';
 import "swiper/css/virtual";
 import image from './assets/images/Image.png'
+import FlipSlider from "./FlipSlider";
 export default function App() {
   return (
     <div className="container">
@@ -61,6 +62,9 @@ export default function App() {
           </div>
         </SwiperSlide>
       </Swiper>
+      <div>
+        <FlipSlider />
+      </div>
     </div >
   );
 }
